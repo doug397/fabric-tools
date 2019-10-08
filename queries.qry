@@ -1,0 +1,24 @@
+/**
+ * New query file
+ */
+
+query selectCommodities {
+  description: "Select all commodities"
+  statement:
+      SELECT org.acme.mynetwork.Commodity
+}
+
+query selectCommoditiesByDataNotificacao {
+  description: "Select all commodities based on their main newRegistro"
+  statement:
+      SELECT org.acme.mynetwork.Commodity
+          WHERE (newRegistro ==_$newRegistro)
+}
+
+
+query selectRegistroMedicoBydatanotificacao {
+  description: "Select all registromedicos based on their main datanotificacao"
+  statement:
+      SELECT org.acme.mynetwork.RegistroMedico
+          WHERE (datanotificacao ==_$datanotificacao)
+}
